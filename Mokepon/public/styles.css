@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+    min-height: 100vh;
+    background-image: url(./imagenes/image.webp);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;    
+    font-family: 'VT323', monospace;
+}
+
+#seleccionar-mascota {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    color : #F17334;
+    font-size: 120px;
+}
+
+
+.subtitulo {
+    color: #1C8E85;
+    font-size: 48px;
+    font-family: 'VT323', monospace;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    column-gap: 15px;
+    row-gap: 15px;
+}
+
+.tarjetas-ataques {
+    display: flex;
+        gap: 10px;
+}
+
+.tarjeta-de-mokepon {
+    width: 244px;
+    height: 148px;
+    background: #1C8E85;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjeta-de-mokepon img {
+    width: 116px;
+}
+
+.tarjeta-de-mokepon :hover {
+    cursor: pointer;
+}
+
+#boton-mascota {
+    background-color: #F17334;
+    margin-top: 32px;
+    color: white;
+    border-radius: 20px;
+    border: 1px solid white;
+    width: 132px;
+    height: 36px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    font-family: 'VT323', monospace;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    background-color: #94B49F;
+}
+
+#seleccionar-ataque {
+    flex-direction: column;
+    align-items: center;
+}
+
+.boton-de-ataque {
+    background-color: #1C8E85;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    color: white;
+    border-color: #12534E;
+    width: 80px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+#mensajes {
+    width: 248px;
+    background-color: #1C8E85;
+    margin-top: 20px;
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    border-color: #12534E;
+    flex-direction: column;
+}
+
+#boton-reiniciar {
+    background-color: #F17334;
+    color: white;
+    border-radius: 20px;
+    border: 1px solid white;
+    width: 100px;
+    height: 36px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.ataque-jugador {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    gap: 100px;
+}
+
+.ataque-enemigo {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    gap: 100px;
+    
+}
+
+.contenedor-vidas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    padding: 2rem;
+}
+
+.tarjeta-vida {
+    display: flex;
+	flex-direction: column;
+    align-items: center;
+	justify-content: space-between;
+
+	background-color: #1C8E85;
+	backdrop-filter: blur(70px);
+	border: var(--border-blur);
+	box-shadow: var(--box-shadow);
+	border-radius: 18px;
+	padding: 2rem;
+
+	width: 12rem;
+	height: 24rem;
+}
+
+#vidas-jugador,
+#vidas-enemigo {
+    color: #F17334;
+    font-size: 4rem;
+}
+
+#vidas-player,
+#vidas-enemy {
+    color: white;
+    font-size: 1.2rem;
+}
+
+#ver-mapa {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#ver-mapa button {
+    background-color: #F17334;
+    margin: 10px 0;
+    color: white;
+    border-radius: 20px;
+    border: 1px solid white;
+    width: 72px;
+    height: 36px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    font-family: 'VT323', monospace;
+}
+
+.subtitulo2 {
+    color: #F17334;
+    font-size: 48px;
+    font-family: 'VT323', monospace;
+}
+
+@media (max-width: 560px) {
+    .titulo {
+        font-size: 72px;
+    }
+    .subtitulo {
+        font-size: 44px;
+    }
+    .tarjetas {
+        flex-direction: column;
+        display: flex;
+        gap: 10px;
+        font-size: 20px;
+    }
+
+    .tarjetas-ataques {
+        flex-direction: column;
+        display: flex;
+        gap: 10px;
+    }
+
+    .contenedor-vidas {
+        gap: 1rem;
+        width: 10px;
+    }
+    .tarjeta-vida {
+        width: 6rem;
+    }
+
+    #boton-mascota {
+        font-family: 'VT323', monospace;
+    }
+    
+}
+
+@media (max-width: 300px) {
+    #ver-mapa div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,69 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <title>CheemsWorld!</title>
+        <link rel="stylesheet" href="./styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <section id="seleccionar-mascota">
+            <h1 class="titulo">CheemsWorld</h1>
+
+            <h2 class="subtitulo">Elige a tu cheems:</h2>
+
+            <div id="contenedor-tarjetas" class="tarjetas">
+
+            </div>
+
+            <button id="boton-mascota">Seleccionar</button>
+        </section>
+
+        <section id="ver-mapa">
+            <h2 class="subtitulo2">Recorre el mapa con tu cheems</h2>
+            <canvas id="mapa"></canvas>
+            <button ontouchend="detenerMovimiento()"onmouseup="detenerMovimiento()" onmousedown="moverArriba()" ontouchstart="moverArriba()">⬆</button>
+            <div>
+                <button ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()" ontouchstart="moverIzquierda()">⬅</button>
+                <button ontouchend="detenerMovimiento()"onmouseup="detenerMovimiento()" onmousedown="moverAbajo()" ontouchstart="moverAbajo()">⬇</button>
+                <button ontouchend="detenerMovimiento()"onmouseup="detenerMovimiento()" onmousedown="moverDerecha()"ontouchstart="moverDerecha() ">➡</button>
+            </div>
+        </section>
+
+        <section id="seleccionar-ataque">
+            <h1 class="titulo">CheemsWorld</h1>
+
+            <h2 class="subtitulo">Elige tu ataque:</h2>
+
+            <div id="contenedor-ataques" class="tarjetas-ataques" >
+                
+            </div> 
+
+                <div id="mensajes">
+                    <p id="resultado">Suerte bb 🥰</p>
+                </div>
+
+                <div>
+                    <section id="reiniciar">
+                        <button id="boton-reiniciar">Reiniciar</button>
+                    </section>
+                </div>
+
+            <div class="contenedor-vidas">
+
+                <div class="tarjeta-vida" id="vidas-player">
+                    <span id="vidas-jugador">0</span>
+                    <p>TU: <span id="mascota-jugador"></span></p>
+                     <div id="ataques-del-jugador"></div>
+
+                </div>
+                <div class="tarjeta-vida" id="vidas-enemy">
+                    <span id="vidas-enemigo">0</span>
+                    <p>Enemigo: <span id="mascota-enemigo"></span></p>
+                    <div id="ataques-del-enemigo"></div>
+                </div>
+            </div>
+        </section>
+        <script src="./mokepon.js"></script>
+    </body>
+    </html>
